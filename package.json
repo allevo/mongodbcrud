@@ -1,0 +1,36 @@
+{
+  "name": "mongodbcrud",
+  "version": "1.0.0",
+  "description": "CRUD wrapper around mongodb library Edit",
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "unittest": "tap test",
+    "test": "npm run lint && npm run unittest",
+    "coverage": "tap --cov --coverage-report=html test/*.test.js test/*/*.test.js",
+    "coveralls": "tap test/*test.js  test/*/*.test.js --cov --coverage-report=text-lcov | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allevo/mongodbcrud.git"
+  },
+  "keywords": [
+    "mongodb",
+    "mongo",
+    "crud"
+  ],
+  "author": "allevo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/allevo/mongodbcrud/issues"
+  },
+  "homepage": "https://github.com/allevo/mongodbcrud",
+  "devDependencies": {
+    "coveralls": "^2.13.1",
+    "mongodb": "^2.2.30",
+    "pre-commit": "^1.2.2",
+    "snazzy": "^7.0.0",
+    "standard": "^10.0.2",
+    "tap": "^10.7.1"
+  }
+}
