@@ -1,6 +1,6 @@
 {
   "name": "mongodbcrud",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "CRUD wrapper around mongodb library Edit",
   "main": "index.js",
   "scripts": {
