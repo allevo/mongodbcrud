@@ -7,12 +7,12 @@
 CRUD wrapper around mongodb library
 
 ## Install
-```
+```sh
 npm i --save mongodbcrud
 ```
 
 ## Usage
-```
+```js
 const MongoClient = require('mongodb').MongoClient
 MongoClient.connect(url)
   .then(db => {
@@ -21,7 +21,7 @@ MongoClient.connect(url)
 ```
 
 ## Api
-```
+```js
 mongodbCrud.findOne(collectionName, query, options)
 mongodbCrud.findOneAndUpdate(collectionName, filter, updateQuery, options)
 mongodbCrud.upsertOne(collectionName, filter, updateQuery, options)
@@ -31,6 +31,8 @@ mongodbCrud.findAll(collectionName, query)
 mongodbCrud.createCollection(collectionName, options)
 ```
 Each method has the collection name as first parameter. The other parameters follow the `mongodb` library means.
+
+All methods return promises.
 
 ## Why
 Using `mongodb` library, some checks should be done anyway. For example `Collection.findOne` method doesn't throw error if document is not found. 
