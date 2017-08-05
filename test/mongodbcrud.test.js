@@ -5,9 +5,9 @@ const t = require('tap')
 const url = 'mongodb://localhost/mongodbcrudtest'
 const MongodbCrud = require('../index')
 
-const COLLECTION_NAME = 'mycollection'
-
 const getRandomString = () => require('crypto').randomBytes(48).toString('hex')
+
+const COLLECTION_NAME = ('mycollection-' + getRandomString()).substr(0, 100)
 
 t.test('connect', t => {
   return MongoClient.connect(url)
